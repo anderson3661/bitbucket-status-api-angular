@@ -80,7 +80,7 @@ export class WidgetsComponent implements OnInit {
     }
 
     unsubscribeFromAPICalls = () => {
-        if (this.updateIntervalObservable) this.updateIntervalObservable.unsubscribe;      //Unsubscribe from the observable to stop memory leaks
+        if (this.updateIntervalObservable) this.updateIntervalObservable.unsubscribe();      //Unsubscribe from the observable to stop memory leaks
     }
 
     changeToMonitoring = (value: boolean) => {

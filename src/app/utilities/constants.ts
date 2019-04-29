@@ -21,4 +21,4 @@ export const PATH_ABOUT = '/about';
 
 export const MAIN_BACKGROUND_IMAGE = '../assets/images/control-center1.jpg';
 
-export const FREQUENCY_OF_UPDATES = ["1 minute", "5 minutes", "10 minutes", "30 minutes", "60 minutes"];
+export const FREQUENCY_OF_UPDATES = ["1 minute", "2 minutes", "5 minutes", "10 minutes", "30 minutes", "60 minutes"];
