@@ -1,4 +1,24 @@
-# Gendis
+# Bitbucket Status API
+
+<p>This app monitors the status of the Bitbucket Status API, and associated services.</p>
+<p><a href="https://bitbucket.status.atlassian.com/api#status" target="_blank" rel="noopener noreferrer">Atlassian Bitbucket Status API Documentation and Functionality</a></p>
+<p>The following API endpoints are used in this app:</p>
+<ul>
+    <li><span>Status</span> - gets the status rollup for the whole page - <span class="api-endpoint">https://bqlf8qjztdtr.statuspage.io/api/v2/status.json</span></li>
+    <li><span>Components</span> - gets the components for the page - <span class="api-endpoint">https://bqlf8qjztdtr.statuspage.io/api/v2/components.json</span></li>
+    <li><span>Unresolved Incidents</span> - gets a list of any unresolved incidents - <span class="api-endpoint">https://bqlf8qjztdtr.statuspage.io/api/v2/incidents/unresolved.json</span></li>
+    <li><span>All Incidents</span> - gets a list of the 50 most recent incidents - <span class="api-endpoint">https://bqlf8qjztdtr.statuspage.io/api/v2/incidents.json</span></li>
+</ul>
+            
+## To build the project:
+<ul>
+  <li>Clone or download from Github</li>
+  <li>In the project directory do npm install to build the node_modules directory and download the project dependencies</li>
+  <li>Follow the <strong>Build</strong> instructions below
+</ul>
+
+## To run the project:
+<strong>Monitoring is disabled by default.  This is to prevent unnecessary calls to the Bitbucket Status API.  Therefore the user will need to enable the Monitoring control to start it.</strong>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
