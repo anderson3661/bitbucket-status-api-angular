@@ -9,6 +9,7 @@ import * as helpers from '../../utilities/helper-functions/helpers';
 })
 export class WidgetControlsComponent implements OnInit {
 
+    public monitoring: boolean = false;
     public FREQUENCY_OF_UPDATES: string[] = FREQUENCY_OF_UPDATES;
     public frequencyOfUpdates: string = FREQUENCY_OF_UPDATES[FREQUENCY_OF_UPDATES.length - 1];
     
