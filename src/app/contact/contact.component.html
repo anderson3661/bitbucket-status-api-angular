@@ -1,0 +1,53 @@
+<div class="outer-container-contact">
+    <div class="container-main-content-contact">
+    
+        <div class="container-card contact">
+
+            <header>
+                <h1>Contact</h1>
+            </header>
+
+            <div class="help-text">
+                <p>If you have any comments about this application, please complete the details below:</p>
+                <p>(This will create a new email in your default email application)</p>
+            </div>
+
+            <form class="example-form">
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Your name" [formControl]="yourName" [errorStateMatcher]="matcher">
+                    <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+                    <mat-error *ngIf="yourName.hasError('required')">
+                        Your name is
+                        <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!-- <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Your email address" [formControl]="yourEmail">
+                    <mat-error *ngIf="yourEmail.hasError('email') && !yourEmail.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="yourEmail.hasError('required')">
+                        Your email address is
+                        <strong>required</strong>
+                    </mat-error>
+                </mat-form-field> -->
+
+                <mat-form-field class="example-full-width">
+                    <textarea matInput placeholder="Your comment(s)" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" [formControl]="yourComments" [errorStateMatcher]="matcher"></textarea>
+                    <mat-error *ngIf="yourComments.hasError('required')">
+                        Your comments are
+                        <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+            </form>
+
+            <div class="submit-button">
+                <button mat-raised-button color="primary" (click)="submit($event)" [disabled]="yourName.value==='' || yourComments.value===''">Submit</button>
+            </div>
+
+        </div>
+    </div>
+</div>

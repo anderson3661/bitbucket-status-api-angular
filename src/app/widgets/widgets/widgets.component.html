@@ -1,0 +1,13 @@
+<ng-container *ngIf="errorMessage; else loadWidgets">
+    <app-loading-error errorMessage={{errorMessage}}></app-loading-error>
+</ng-container>
+
+<ng-template #loadWidgets>
+    <div class="container-widgets">
+        <app-status-overall class="app-full-width" statusIndicator={{statusIndicator}} statusDescription={{statusDescription}} ></app-status-overall>
+        <app-status-services class="app-full-width" [statusOfServices]="selectedStatusOfServices" ></app-status-services>
+        <app-widget-controls class="app-full-width" (monitoringControls)="changeToMonitoring($event)" (frequencyOfUpdatesControls)="changeToFrequencyOfUpdates($event)" lastUpdated={{lastUpdated}} ></app-widget-controls>
+        <app-incidents-current class="app-full-width" [currentIncidents]="currentIncidents" ></app-incidents-current>
+        <app-incidents-recent [recentIncidents]="recentIncidents" ></app-incidents-recent>
+    </div>
+</ng-template>

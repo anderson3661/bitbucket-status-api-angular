@@ -1,0 +1,48 @@
+// ***************** General ****************
+$font-family-main: Arial, Helvetica, sans-serif;
+$background-color-main-body: black;
+$line-height-main-body: 1.0;
+
+
+// ************* Container Card *************
+$color-container-card: black;
+$background-color-container-card: rgba(255, 255, 255, 0.95);
+$box-shadow-color-container-card: rgba(0, 0, 0, 0.5);
+$background-color-container-card-information: rgba(240, 248, 255, 0.95);
+
+
+// ***************** Widgets ****************
+$color-status-indicator-none: green;
+$color-status-indicator-minor: orange;
+$color-status-indicator-major: darkred;
+$color-status-indicator-critical: red;
+$color-services-status-operational: green;
+$color-services-status-not-operational: red;
+$color-incidents-current-total: blue;
+$background-color-controls: lightblue;
+
+
+// ************ Loading Errors **************
+$background-color-loading-errors: red;
+$color-loading-errors: white;
+
+
+// ***************** Header *****************
+$font-size-nav-app-header: 130%;
+$font-size-nav-header-main-links: 88%;
+$color-nav-app-header: white;
+$color-nav-header-main-links: blue;
+$background-color-nav-header: rgba(0, 0, 0, 0.9);
+$background-color-nav-app-header: rgba(58, 57, 57, 0.3);
+$background-color-nav-header-on-scroll: rgba(0, 0, 0, 0.9);
+
+
+// ***************** Footer *****************
+$color-main-footer: white;
+$background-color-main-footer: #4C4C4C;
+
+
+// ********************* Contact *********************
+$color-contact-form: black;
+$color-contact-form-invalid-message: red;
+$background-contact-form: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgb(203, 203, 204) 100%);

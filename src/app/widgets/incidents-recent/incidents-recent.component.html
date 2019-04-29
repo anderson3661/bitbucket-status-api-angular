@@ -1,0 +1,31 @@
+<div class="container-card incidents-recent">
+
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" id="table-incidents-recent">
+
+        <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+        <!-- Service Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Service </th>
+            <td class="service" mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+    
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+            <td class="status" mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
+    
+        <!-- Created At Column -->
+        <ng-container matColumnDef="created_at">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Created At </th>
+            <td class="created_at" mat-cell *matCellDef="let element"> {{getFormattedDate(element.created_at)}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+</div>

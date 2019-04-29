@@ -1,0 +1,181 @@
+@import '../../../sass/mixins';
+@import '../../../sass/_variables';
+
+.container-widgets {
+    min-height: 70vh;
+    @include flex();
+    margin: 14vh auto 10vh auto;
+    box-sizing: border-box;
+}
+
+.container-card {
+
+    &.status-overall, &.status-services, &.incidents-current, &.incidents-recent, &.widget-controls {
+        position: fixed;
+    }
+
+    &.status-overall {
+        top: 30vh;
+        left: 7vw;
+        width: 30vw;
+
+        p.status-indicator, p.status-description {
+            font-size: 150%;
+            font-weight: 900;
+            width: 100%;
+            text-align: center;
+            &.none { color: $color-status-indicator-none; }
+            &.minor { color: $color-status-indicator-minor; }
+            &.major { color: $color-status-indicator-major; }
+            &.critical { color: $color-status-indicator-critical; }
+        }
+
+        p.status-indicator {
+            text-transform: uppercase;
+        }
+    }
+
+    &.status-services {
+        top: 47vh;
+        left: 7vw;
+        width: 30vw;
+
+        table { width: 100%; border-collapse: collapse; }
+        tr td {
+            padding: 1.5vh 0;
+        }
+
+        td.status.operational {
+            color: $color-services-status-operational;
+            padding-left: 2vw;
+        }
+
+        td.status:not(operational) {
+            color: $color-services-status-not-operational;
+            padding-left: 2vw;
+        }
+    }
+
+    &.incidents-current {
+        top: 5vh;
+        right: 5vw;
+        width: 40vw;
+
+        span {
+            color: $color-incidents-current-total;
+            margin-left: 20px;
+        }
+    }
+
+    &.incidents-recent {
+        top: 13vh;
+        bottom: 0;
+        right: 5vw;
+        width: 40vw;
+        height: 75vh;
+        overflow: auto;
+
+        tr td { padding: 0.25vh 0.5vw; font-size: 85%; }
+        td.service { width: 50%; }
+        td.status { width: 20%; }
+        td.created_at { width: 30%; }
+    }
+
+    &.widget-controls {
+        top: 75vh;
+        left: 7vw;
+        width: 30vw;
+        background-color: $background-color-controls;
+
+        p.last-updated {
+            font-size: 90%;
+            margin: 2vh 0 0 0;
+            span {
+                margin-left: 2vw;
+            }
+        }
+
+        .frequency span {
+            font-size: 90%;
+            font-weight: normal;
+            margin-right: 2vw;
+        }
+
+        span.monitoring {
+            margin-left: 5vw;
+            font-size: 80%;
+        }
+    }
+
+    #tableTitleDiv {
+        width: 100%;
+    }
+}
+
+table#table-incidents-recent {
+    background-color: transparent;
+    box-shadow: unset;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .container-card {
+        &.status-overall, &.status-services, &.widget-controls {
+            font-size: 90%;
+            left: 3vw;
+            width: 35vw;
+        }
+
+        &.incidents-current, &.incidents-recent {
+            font-size: 90%;
+            width: 48vw;
+            right: 3vw;
+        }
+
+        &.incidents-recent {
+            td.service { width: 55% }
+            td.status { width: 20% }
+            td.created_at { width: 25% }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .container-widgets {
+        @include flex($flex-direction: column);
+    }
+
+    .app-full-width {
+        width: 100%;
+    }
+
+    .container-card {
+        &.status-overall, &.status-services, &.incidents-current, &.incidents-recent, &.widget-controls {
+            font-size: 100%;
+            width: 80%;
+            position: relative;
+            top: unset;
+            left: unset;
+            right: unset;
+            height: unset;
+            margin-bottom: 3vh;
+        }
+
+        &.status-services {
+            table {
+                width: unset;
+                margin: 0 auto;
+            }
+        }
+
+        &.widget-controls {
+            p.last-updated, .frequency {
+               text-align: center;
+            }
+        }
+
+        &.incidents-recent {
+            width: 90%;
+        }
+    }
+}

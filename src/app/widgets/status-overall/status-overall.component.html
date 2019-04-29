@@ -1,0 +1,5 @@
+<div class="container-card status-overall">
+    <header>Overall Status</header>
+    <p *ngIf="statusIndicator !== STATUS_API_NONE" class="status-indicator {{statusIndicator}}">{{statusIndicator}}</p>
+    <p class="status-description {{statusIndicator}}">{{statusDescription}}</p>
+</div>

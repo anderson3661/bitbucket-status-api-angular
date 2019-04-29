@@ -1,0 +1,12 @@
+<div class="container-card status-services">
+    <header>Services Status</header>
+    <table>
+        <tbody>
+            <!-- <tr *ngFor="let type of statusOfServices" [class.operational]={{type.status === SERVICES_OPERATIONAL}}> -->
+            <tr *ngFor="let type of statusOfServices">
+                <td class="service">{{type.name}}</td>
+                <td class="status {{type.status === SERVICES_OPERATIONAL ? 'operational' : ''}}">{{type.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

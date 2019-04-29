@@ -1,0 +1,24 @@
+@import '../../sass/mixins';
+@import '../../sass/_variables';
+
+
+.outer-container-loading-error {
+
+    .container-main-content-loading-error {
+        height: 94vh;
+        @include flex($flex-direction: column);
+
+        .container-card.loading-error {
+            background-color: $background-color-loading-errors;
+
+            header {
+                color: $color-loading-errors;
+            }
+
+            p {
+                text-align: left;
+                margin: 4vh 0;
+            }
+        }
+    }
+}

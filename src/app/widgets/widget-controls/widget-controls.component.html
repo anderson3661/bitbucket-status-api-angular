@@ -1,0 +1,13 @@
+<div class="container-card widget-controls">
+    <header>Controls<span class="monitoring"><mat-slide-toggle [checked]="monitoring" (change)="onChangeMonitoring($event)">Monitoring</mat-slide-toggle></span></header>
+    <p class="last-updated">Calls to the API were last made: <span class="monitoring-last-updated">{{lastUpdated}}</span></p>
+    <div class="frequency"><span>Frequency of API calls:</span>
+        <mat-form-field class="frequency">
+            <mat-select [(value)]="frequencyOfUpdates" (selectionChange)="onChangeFrequencyOfUpdates($event)">
+                <mat-option *ngFor="let frequency of FREQUENCY_OF_UPDATES" [value]="frequency">
+                    {{frequency}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>

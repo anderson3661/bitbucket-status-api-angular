@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MAIN_BACKGROUND_IMAGE } from 'src/app/utilities/constants';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gendis';
+
+    public MAIN_BACKGROUND_IMAGE: string = MAIN_BACKGROUND_IMAGE;
+
 }
