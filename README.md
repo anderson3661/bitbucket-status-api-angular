@@ -17,6 +17,8 @@
   <li>Follow the <strong>Build</strong> instructions below
 </ul>
 
+## To run the project:
+<strong>Monitoring is disabled by default.  This is to prevent unnecessary calls to the Bitbucket Status API.  Therefore the user will need to enable the Monitoring control to start it.</strong>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
